@@ -13,4 +13,4 @@ Then when you run the program you will br prompted for the box Name and IP. It w
 
 When you are in the directory that the python folder is in you can run `python3 setupBox.py` 
 
-Working on making the program run from anywhere.
+Working on making the program run from anywhere and the ability that it will create a directory in the `/boxes` directory.
