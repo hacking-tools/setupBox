@@ -1,0 +1,22 @@
+#!/usr/bin/python3
+import os
+print(50*"-")
+print("Box Setup and Instant Scan Tool")
+print(50*"-")
+boxName = input("What is the box name? ")
+boxIP = input("What is the box IP? ")
+etcn = input("What is the ending address, (com, net, htb, thm, etc): ")
+boxNameHTB = boxName + "." + etcn
+hostIP = boxNameHTB + ":" + boxIP
+try:
+	print(50*"-")
+	print("Adding {} to /etc/hosts file.".format(boxNameHTB))
+	print(50*"-")
+	os.system("hostsman -i " + hostIP)
+except:
+    print("Box already added to /etc/hosts")
+print("Added " + boxNameHTB + " to /etc/hosts ")
+print(50*"-")
+print("Starting NMAP scan")
+nmapCommand = "fmap " + boxNameHTB
+os.system(nmapCommand)
