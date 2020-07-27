@@ -1,16 +1,15 @@
 # setupBox
-This allows you to add the current HTB Box IP and name to the `/etc/hosts` file, and also create a folder for the box in your htb folder.
+This allows you to add the current HTB Box IP and name to the `/etc/hosts` file.
 
 # How To Setup
-
-There should be a folder like `/root/hackthebox/` or `/root/htb/`
-
-Inside that folder there should be at least 2 folders with the names of `boxes` and `boxGen` you will put the python file in `boxGen`
 
 Then install the requirement by typing `pip install hostsman`
 
 Then when you run the program you will br prompted for the box Name and IP. It will then add that information to the `/etc/hosts` file so that instead of typing in the IP every time you can just right `boxname.htb`.
 
-When you are in the directory that the python folder is in you can run `python3 setupBox.py` 
-
-Working on making the program run from anywhere and the ability that it will create a directory in the `/boxes` directory.
+# Installation:
+1. Download the newest release from the releases tab.
+2. Unzip the file.
+3. In terminal, navigate to the directory that the file `setupBox` is in.
+4. Then type the command: `sudo mv ./setupBox /usr/local/bin/setupBox`
+5. Test the program out by typing `setupBox` and follow the steps to setup the IP.
