@@ -15,8 +15,10 @@ try:
 	os.system("hostsman -i " + hostIP)
 except:
     print("Box already added to /etc/hosts")
-print("Added " + boxNameHTB + " to /etc/hosts ")
+print("Added " + str(boxNameHTB) + " to /etc/hosts ")
 print(50*"-")
-print("Starting NMAP scan")
-nmapCommand = "fmap " + boxNameHTB
-os.system(nmapCommand)
+wouldLikeNMAP = input("Would you like to start an nmap scan? (Y/N)")
+if wouldLikeNMAP == "Y":
+	print("Starting NMAP scan")
+	nmapCommand = "fmap " + str(boxNameHTB)
+	os.system(nmapCommand)
